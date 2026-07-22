@@ -1,4 +1,4 @@
-.photo {
+..photo {
   width: 180px;
   height: 180px;
   object-fit: cover;
@@ -6,6 +6,7 @@
   border: 5px solid #ffb6d9;
   margin-bottom: 20px;
   box-shadow: 0 0 20px pink;
+}
 }
 body {
   background: linear-gradient(#ffd6e7, #fff);
