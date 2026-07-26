@@ -10,12 +10,41 @@
 <div class="confetti"></div>
 <div class="confetti"></div>
 <div class="confetti"></div>
-  
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+function showSurprise() {
+  document.getElementById("surprise").style.display = "block";
+
+  var duration = 5000;
+  var end = Date.now() + duration;
+
+  (function frame() {
+    confetti({
+      particleCount: 5,
+      angle: 60,
+      spread: 70,
+      origin: { x: 0 }
+    });
+
+    confetti({
+      particleCount: 5,
+      angle: 120,
+      spread: 70,
+      origin: { x: 1 }
+    });
+
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+  }());
+}
+</script>
 <body>
 
 <div class="card">
 
-" <img src="./Screenshot_2026-07-22-01-11-47-251_com.whatsapp.jpg" class="photo">
+<img src="./Screenshot_2026-07-22-01-11-47-251_com.whatsapp.jpg" class="photo">
 <h1>Happy Birthday My Rasmalai 🎂💗</h1>
 
   <p id="typing"></p>
@@ -54,11 +83,53 @@ Always my <b>pasandeeda aurat</b> in life. Wishing you a wonderful day filled wi
 Do you remember the day we met as complete strangers and sat together on that bench? Did you ever imagine we'd become best buddies one day? 😭❤️<br><br>
 
 I'm so grateful that life brought us together. No matter where life takes us, you'll always have a special place in my heart. Love you always! 🥹🫂
-</
+
 </p>
 <script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+const text = "You are so special 🫵🏻 and the sweetest girl ever 💗 The most beautiful woman I've ever seen 🫠 The most kind and supportive one. I'm so blessed to have you in my life 😚🫂";
+
+let i = 0;
+
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 50);
+  }
+}
+
+typeEffect();
+
 function showSurprise() {
   document.getElementById("surprise").style.display = "block";
+
+  var duration = 5000;
+  var end = Date.now() + duration;
+
+  (function frame() {
+    confetti({
+      particleCount: 5,
+      angle: 60,
+      spread: 70,
+      origin: { x: 0 }
+    });
+
+    confetti({
+      particleCount: 5,
+      angle: 120,
+      spread: 70,
+      origin: { x: 1 }
+    });
+
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+  })();
+}
+</script>
 }
 </script>
 
