@@ -70,7 +70,19 @@ typeEffect();
 
   <h2>Stay happy forever 💕</h2>
   <button onclick="showSurprise()">Open Your Surprise 🎁</button>
+<div id="cake" style="display:none;">
+  <div class="cake">
+    <div class="candles">
+      <span class="candle"></span>
+      <span class="candle"></span>
+      <span class="candle"></span>
+    </div>
 
+    <div class="layer top"></div>
+    <div class="layer middle"></div>
+    <div class="layer bottom"></div>
+  </div>
+</div> 
 <p id="surprise" style="display:none;">
 You are one of the most precious people in my life 💗✨
 <h2>To My Dobiiiiiiiii 🤍</h2>
@@ -105,7 +117,7 @@ typeEffect();
 
 function showSurprise() {
   document.getElementById("surprise").style.display = "block";
-
+  document.getElementById("cake").style.display = "block";
   var duration = 5000;
   var end = Date.now() + duration;
 
